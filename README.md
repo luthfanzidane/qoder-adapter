@@ -47,7 +47,7 @@ src/qoder/
 └── __main__-style entry: python -m qoder.http_api.server
 tools/pat/          # PAT lifecycle utilities (convert PAT → 9router connection)
 deploy/             # systemd unit
-docs/               # architecture notes
+docs/               # architecture notes + prod PAT insertion playbook
 ```
 
 Dependency rule: `http_api → upstream/adapters → core`. `core` imports nothing from the
