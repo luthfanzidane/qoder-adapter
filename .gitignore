@@ -1,0 +1,12 @@
+.env
+.env.*
+*.sqlite*
+pat_connections.json
+*.log
+*.bak*
+__pycache__/
+*.pyc
+.venv/
+dist/
+build/
+*.egg-info/

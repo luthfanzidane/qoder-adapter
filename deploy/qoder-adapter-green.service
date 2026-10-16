@@ -1,0 +1,17 @@
+[Unit]
+Description=Qoder PAT HTTP adapter Green (standby/test)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/qoder-adapter
+EnvironmentFile=/home/ubuntu/qoder-adapter/.env
+ExecStart=/home/ubuntu/qoder-adapter/.venv/bin/python -m qoder.server
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target
